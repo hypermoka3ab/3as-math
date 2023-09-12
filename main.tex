@@ -1,0 +1,39 @@
+\documentclass[12pt,twoside]{book}
+\input{preamble/preamble}
+%! TeX root
+\begin{document}
+
+\pagestyle{plain}
+
+\renewcommand{\contentsname}{فـهـرس}
+\tableofcontents
+\addcontentsline{toc}{chapter}{فـهـرس}
+
+\listoffigures
+\addcontentsline{toc}{chapter}{قـائـمة الأشـكـال}
+
+\listoftables
+\addcontentsline{toc}{chapter}{قـائـمة الجـداول}
+
+\printabbreviations[title=قـائـمة الاخـتـصـارات]
+\addcontentsline{toc}{chapter}{قـائـمة الاخـتـصـارات}
+
+\chapter{نـهـايـات الـدّوال}%
+\label{chap:functionlimits}
+
+\section{تـعـاريـف}%
+\label{sec:functionlimits:definitons}
+
+\begin{example}\ \\
+    هذا مثال لتوضيح الفرق بين النهاية والحد.
+    \begin{figure}[H]
+        \centering
+        \begin{asy}
+            size(3cm, 6cm);
+            label("$A\transpose{A}$", (0,0), dir(0));
+        \end{asy}
+        \caption{مثال}
+    \end{figure}
+\end{example}
+
+\end{document}

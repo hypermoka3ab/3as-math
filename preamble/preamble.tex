@@ -1,0 +1,46 @@
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{%
+    colorlinks=true,
+    linkcolor=orange!70!black,
+    urlcolor=blue,
+    citecolor=green,
+}
+
+%%fakesection Theorems
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\usepackage[nameinlink]{cleveref}
+
+%%fakesection Answers
+\usepackage{answers}
+
+% figure inside theorem
+\usepackage{floatrow}
+
+
+% abbreviations
+\usepackage[abbreviations, automake]{glossaries-extra}
+\setabbreviationstyle{long-short}
+\GlsXtrEnableInitialTagging{abbreviation}{\itag}
+\newcommand{\highlight}[1]{\uppercase{\textbf{#1}}}
+\renewcommand{\glsxtrtagfont}{\highlight}
+\makeglossaries
+
+
+\input{preamble/tikz}
+\input{preamble/asymptote}
+\input{preamble/polyglossia}
+\input{preamble/theroems}
+\input{preamble/notation}
+
+% bibliography
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
