@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside]{book}
+\documentclass[12pt,oneside]{book}
 \input{preamble/preamble}
 %! TeX root
 \begin{document}
@@ -6,14 +6,17 @@
 \pagestyle{plain}
 
 \renewcommand{\contentsname}{فـهـرس}
+\renewcommand{\listfigurename}{قـائـمـة الأشـكـال}
+\renewcommand{\listtablename}{قـائـمـة الجـداول}
+
 \tableofcontents
 \addcontentsline{toc}{chapter}{فـهـرس}
 
 \listoffigures
-\addcontentsline{toc}{chapter}{قـائـمة الأشـكـال}
+\addcontentsline{toc}{chapter}{\listfigurename}
 
 \listoftables
-\addcontentsline{toc}{chapter}{قـائـمة الجـداول}
+\addcontentsline{toc}{chapter}{\listtablename}
 
 \printabbreviations[title=قـائـمة الاخـتـصـارات]
 \addcontentsline{toc}{chapter}{قـائـمة الاخـتـصـارات}
