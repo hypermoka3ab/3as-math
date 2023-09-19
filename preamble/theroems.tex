@@ -7,7 +7,7 @@
 	innerbottommargin=9pt,
 	skipbelow=2pt,
 	nobreak=true,
-	linecolor=blue,
+	linecolor=black,
 	backgroundcolor=TealBlue!5,
 }
 \declaretheoremstyle[
@@ -37,12 +37,12 @@
 	postheadspace={0pt},
 ]{thmredbox}
 
-\declaretheorem[%
-	style=thmbluebox,name=مبرهنة,numberwithin=section]{theorem}
-\declaretheorem[style=thmbluebox,name=Lemma,sibling=theorem]{lemma}
-\declaretheorem[style=thmbluebox,name=Proposition,sibling=theorem]{proposition}
-\declaretheorem[style=thmbluebox,name=Corollary,sibling=theorem]{corollary}
-\declaretheorem[style=thmredbox,name=مثال,sibling=theorem]{example}
+\declaretheorem[style=thmbluebox,name=مبرهنة,numberwithin=chapter]{theorem}
+\declaretheorem[style=thmbluebox,name=تـوطـئـة,sibling=theorem]{lemma}
+\declaretheorem[style=thmbluebox,name=خـاصـيـة,sibling=theorem]{proposition}
+\declaretheorem[style=thmbluebox,name=نـتـيـجـة,sibling=theorem]{corollary}
+\declaretheorem[style=thmbluebox,name=مبرهنة و تعريف]{theoremdef}
+\declaretheorem[style=thmredbox,name=مثال,numberwithin=chapter]{example}
 
 \mdfdefinestyle{mdgreenbox}{%
 	skipabove=8pt,
@@ -90,11 +90,12 @@
 ]{thmblackbox}
 
 \theoremstyle{theorem}
-\declaretheorem[name=سؤال,sibling=theorem,style=thmblackbox]{ques}
-\declaretheorem[name=تمرين,sibling=theorem,style=thmblackbox]{exercise}
-\declaretheorem[name=ملاحظة,sibling=theorem,style=thmgreenbox]{remark}
-\declaretheorem[name=ملاحظة,sibling=theorem,style=thmgreenbox*]{remark*}
+\declaretheorem[name=سؤال,style=thmblackbox,numberwithin=chapter]{ques}
+\declaretheorem[name=تمرين,style=thmblackbox,sibling=ques]{exercise}
+\declaretheorem[name=ملاحظة,numberwithin=chapter,style=thmgreenbox]{remark}
+\declaretheorem[name=ملاحظة,numberwithin=chapter,style=thmgreenbox*]{remark*}
 \declaretheorem[name=خطوة,style=thmgreenbox]{step} % only used in Lebesgue int
+\declaretheorem[name=طريقة,style=thmgreenbox]{method}
 
 \theoremstyle{definition}
 \newtheorem{claim}[theorem]{Claim}
@@ -102,10 +103,10 @@
 \newtheorem{fact}[theorem]{Fact}
 \newtheorem{abuse}[theorem]{Abuse of Notation}
 
-\newtheorem{problem}{مسألة}[chapter]
-\renewcommand{\theproblem}{\thechapter\Alph{problem}}
-\newtheorem{sproblem}[problem]{مسألة}
-\newtheorem{dproblem}[problem]{مسألة}
+\newtheorem{problem}[exercise]{مسألـة}
+\renewcommand{\theproblem}{\arabic{problem}}
+\newtheorem{sproblem}[problem]{مسألـة}
+\newtheorem{dproblem}[problem]{مسألـة}
 \renewcommand{\thesproblem}{\theproblem$^{\star}$}
 \renewcommand{\thedproblem}{\theproblem$^{\dagger}$}
 \newcommand{\listhack}{$\empty$\vspace{-2em}}
