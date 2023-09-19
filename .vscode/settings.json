@@ -22,13 +22,25 @@
       "name": "biber",
       "command": "biber",
       "args": ["main"]
+    },
+    {
+      "name": "rename",
+      "command": "/usr/bin/cp",
+      "args": ["main.pdf", "cours.pdf"]
     }
   ],
 
   "latex-workshop.latex.recipes": [
     {
       "name": "build",
-      "tools": ["compile", "makeglossaries", "biber", "compile", "clean"]
+      "tools": [
+        "compile",
+        "makeglossaries",
+        "biber",
+        "compile",
+        "clean",
+        "rename"
+      ]
     }
   ],
   "latex-workshop.latex.recipe.default": "build",
