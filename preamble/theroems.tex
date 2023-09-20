@@ -98,7 +98,25 @@
 
 \theoremstyle{definition}
 \newtheorem{claim}[theorem]{Claim}
-\newtheorem{definition}{تعريف}[chapter]
+
+\mdfdefinestyle{mdorangebox}{%
+	roundcorner = 10pt,
+	linewidth=1pt,
+	skipabove=12pt,
+	innerbottommargin=9pt,
+	skipbelow=2pt,
+	nobreak=true,
+	linecolor=black,
+	backgroundcolor=YellowOrange!5,
+}
+\declaretheoremstyle[
+	headfont=\sffamily\bfseries\color{black},
+	mdframed={style=mdorangebox},
+	headpunct={\\[3pt]},
+	postheadspace={0pt}
+]{thmorangebox}
+\declaretheorem[name=تعريف,numberwithin=chapter,style=thmorangebox]{definition}
+
 \newtheorem{fact}[theorem]{Fact}
 \newtheorem{abuse}[theorem]{Abuse of Notation}
 
